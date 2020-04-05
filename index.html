@@ -1,0 +1,49 @@
+<html>
+  <head>
+	<style>
+	  .colorbox, .stroke {display: block; border: 1px solid black; width: 10px; height: 10px};
+	  .colorbox {width: 10px}
+	  </style>
+	</head>
+<body onload="initDrawful()">
+
+<textarea id="debug" cols="120" rows="10"></textarea>
+  
+<div id="drawingDiv" style="height: 400px; display: block;">
+	<canvas id="canvas1" width="400px" height="400px;float:left" style="border:medium;border-color:#00F;border-style:solid;"></canvas><p></p>
+<div style="float:left" id="colorsDiv">
+		Colors :<p></p>
+<div class="colorbox" id="blackbox" style="background-color:black"></div>
+<div class="colorbox selectedColor" id="redbox" style="background-color:red;"></div>
+<div class="colorbox" id="bluebox" style="background-color:blue;"></div>
+<div class="colorbox" id="whitebox" style="background-color:white;"></div>
+<div class="colorbox" id="greenbox" style="background-color:green;"></div>
+<div>
+<br>
+		Stoke Size :<p></p>
+<div class="stroke" style="border-radius:3px;border-width:3px;"></div>
+<div class="stroke" style="border-radius:6px;border-width:5px;"></div>
+<div class="stroke" style="border-radius:8px;border-width:7px;"></div>
+<div class="stroke" style="border-radius:12px;border-width:10px;"></div>
+<div class="stroke stroke_selected" style="border-radius:16px;border-width:13px;"></div>
+<div class="stroke" style="border-radius:18px;border-width:15px;"></div>
+<p></p></div>
+<p></p></div>
+</div>
+
+<div id="canvasBtnsDiv">
+<input type="button" id="recordBtn" value="Record"><input type="button" id="playBtn" value="Play"><input type="button" id="pauseBtn" value="Pause" style="display: none;"><input type="button" id="clearBtn" value="Clear"><br><input type="button" id="serializeBtn" value="Serialize"><input type="button" id="deserializeBtn" value="Deserialize">
+</div>
+
+<div id="serializerDiv" style="display:none">
+<textarea rows="8" cols="60" id="serDataTxt"></textarea><br><input type="button" id="cancelBtn" value="Close"><input type="submit" id="okBtn" value="Submit">
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="js/RecordableDrawing.js"></script>
+<script src="js/drawingSerializer.js"></script>
+<script src="js/app-script.js"></script>
+<script src="js/websocket.js"></script>
+
+</body>
+</html>
